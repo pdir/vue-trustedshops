@@ -1,11 +1,19 @@
 {
-  "name": "vue-trustedshops",
+  "name": "@pdir/vue-trustedshops",
   "version": "0.1.0",
   "description": "Vue plugin for Trustedshops",
+  "keywords": [
+    "vue",
+    "components",
+    "trustedshops",
+    "reviews",
+    "testimonial"
+  ],
   "author": "Mathias Arzberger (https://github.com/pdir)",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build-bundle": "vue-cli-service build --target lib --name trustedshops",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -13,6 +21,14 @@
     "axios": "^0.18.0",
     "vue-carousel": "^0.6.9"
   },
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js"
+  ],
+  "main": "./dist/trustedshops.js",
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.4",
     "@vue/cli-plugin-eslint": "^3.0.4",
