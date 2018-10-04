@@ -12,7 +12,7 @@
                 <div class="quote">&bdquo;</div>
 
                 <carousel :per-page="1" :loop="true" :autoplay="true" :autoplay-timeout="4000">
-                    <slide v-for="review in reviews" class="review">
+                    <slide v-for="(review, index) in reviews" :key="index" class="review">
                         {{ review.comment }}
                     </slide>
                 </carousel>
@@ -25,7 +25,7 @@
                 <div class="footerArrow"></div>
             </div>
             <div class="ts-footer-logo">
-                <img alt="e trustedshops logo" src="../assets/e-trustedshops_black.svg">
+                <img alt="e trustedshops logo" src="@/assets/e-trustedshops_black.svg">
             </div>
 
         </section>
@@ -39,7 +39,7 @@
     export default {
         components: {
             Carousel,
-            Slide,
+            Slide
         },
         data: function () {
             return {
@@ -59,7 +59,6 @@
             axios
                 .get(this.apiUrl + '/reviews.json')
                 .then(response => {
-                    console.log(response.data)
                     this.language = response.data.response.data.shop.languageISO2
                     this.reviews = response.data.response.data.shop.reviews
                 })
@@ -71,7 +70,6 @@
             axios
                 .get(this.apiUrl + '/quality.json')
                 .then(response => {
-                    console.log(response.data.response)
                     this.reviewIndicator = response.data.response.data.shop.qualityIndicators.reviewIndicator
                 })
         }

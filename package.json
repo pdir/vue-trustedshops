@@ -1,6 +1,6 @@
 {
   "name": "@pdir/vue-trustedshops",
-  "version": "0.1.0",
+  "version": "0.1.7",
   "description": "Vue plugin for Trustedshops",
   "keywords": [
     "vue",
@@ -13,7 +13,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build-bundle": "vue-cli-service build --target lib --name trustedshops",
+    "build-bundle": "vue-cli-service build --target lib --name vue-trustedshops ./src/components/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -28,7 +28,7 @@
     "*.json",
     "*.js"
   ],
-  "main": "./dist/trustedshops.js",
+  "main": "./dist/vue-trustedshops.common.js",
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.4",
     "@vue/cli-plugin-eslint": "^3.0.4",

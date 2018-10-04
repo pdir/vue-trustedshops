@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import Testimonial from './components/Testimonial.vue'
+import Testimonial from './components/Testimonial'
 
 export default {
   name: 'app',
